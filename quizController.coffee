@@ -38,7 +38,6 @@ app.controller 'quizController', ($scope, msgModalService) ->
 
 	updateCode = () ->
 		$scope.javascript = Blockly.JavaScript.workspaceToCode workspace
-		console.log $scope.javascript
 
 	$scope.showCode = () ->
 		$scope.showJs = !$scope.showJs
