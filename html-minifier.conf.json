@@ -1,0 +1,9 @@
+{
+	"removeComments": true,
+	"collapseWhitespace": true,
+	"conservativeCollapse": true,
+	"minifyJS": {
+		"mangle": false,
+		"minifyCSS": true
+	}
+}

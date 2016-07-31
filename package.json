@@ -4,10 +4,13 @@
   "scripts": {
     "dev": "lite-server & nodemon --exec jade index.jade -e jade,coffee",
     "pree2e": "webdriver-manager update",
-    "e2e": "protractor protractor.conf.coffee"
+    "e2e": "protractor protractor.conf.coffee",
+    "build": "jade index.jade",
+    "postbuild": "html-minifier index.html -c html-minifier.conf.json -o index.min.html; mv index.min.html index.html"
   },
   "devDependencies": {
     "coffee-script": "^1.10.0",
+    "html-minifier": "^3.0.2",
     "jade": "^1.11.0",
     "jasmine": "^2.4.1",
     "jstransformer-coffee-script": "^1.0.0",
