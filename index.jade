@@ -10,13 +10,21 @@ html(lang="en" ng-app="blockly-quiz")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.min.js")
+		script(src="./blockly/blockly_compressed.js")
+		script(src="./blockly/blocks_compressed.js")
+		script(src="./blockly/javascript_compressed.js")
+		script(src="./blockly/msg/js/en.js")
 	body
 		div(ng-view)
 
 		script
 			include:coffee-script main.coffee
+			include:coffee-script ./msgModal/msgModalService.coffee
 
 		include ./quiz.jade
+		include ./msgModal/msgModal.jade
+
+		//- include ./blocklyDiv.html
 
 		script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js")

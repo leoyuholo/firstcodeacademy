@@ -1,0 +1,8 @@
+script
+	include:coffee-script msgModalController.coffee
+script(type="text/ng-template" id="views/msgModal")
+	.modal-header
+		button.close(ng-click="dismiss()" type="button") ×
+		h3 {{header}}
+	.modal-body
+		p {{msg}}
