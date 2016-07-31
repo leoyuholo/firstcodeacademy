@@ -1,4 +1,23 @@
 script
 	include:coffee-script quizController.coffee
 script(type="text/ng-template" id="views/quiz")
-	p {{title}}
+	.container#quiz-view
+		.col-md-12.col.sm-12
+			.panel.panel-default
+				.panel-heading
+					h2 Blockly Quiz
+				.panel-body
+					span.btn-toolbar.pull-right
+						.btn-group
+							button.btn.btn-default.glyphicon.glyphicon-chevron-left(type="button" ng-click="previousQuestion()" ng-disabled="question.index === 0")
+							.btn-group(uib-dropdown)
+								button.btn.btn-link(uib-dropdown-toggle) Question {{question.index + 1}} of {{questions.length}}
+								ul.dropdown-menu(uib-dropdown-menu)
+									li(role="menuitem" ng-repeat="q in questions")
+										a(href="" ng-click="goToQuestion(q)") Q.{{q.index + 1}} {{q.title}}
+							button.btn.btn-default.glyphicon.glyphicon-chevron-right(type="button" ng-click="nextQuestion()" ng-disabled="question.index === questions.length")
+					h3 {{question.title}}
+					p {{question.description}}
+					p Tutorial: 
+						a(ng-href="question.tutorial.url") {{question.tutorial.title}}
+					a(href="" uib-tooltip="{{question.hint}}") Hint
