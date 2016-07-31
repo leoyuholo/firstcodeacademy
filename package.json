@@ -1,0 +1,14 @@
+{
+  "name": "first-code-academy-programming-test",
+  "description": "First Code Academy Programming Test",
+  "scripts": {
+    "dev": "lite-server & nodemon --exec jade index.jade -e jade,coffee"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.10.0",
+    "jade": "^1.11.0",
+    "jstransformer-coffee-script": "^1.0.0",
+    "lite-server": "^2.2.2",
+    "nodemon": "^1.10.0"
+  }
+}

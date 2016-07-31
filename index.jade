@@ -1,0 +1,21 @@
+doctype html
+html(lang="en" ng-app="blockly-quiz")
+	head
+		meta(charset="utf-8")
+		title(ng-bind="title") Blockly Quiz
+		meta(name="Description" content="First Code Academy Programming Test")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.min.js")
+	body
+		div(ng-view)
+
+		script
+			include:coffee-script main.coffee
+
+		include ./quiz.jade
+
+		script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js")
